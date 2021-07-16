@@ -4,7 +4,7 @@ This app is a Management Information System (MIS) which also has a login feature
 It's developed on Flask(python) for backend.
 It uses 3 sqlite databases for storing the data
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///contacts.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///contacts.db" 
 app.config['SQLALCHEMY_BINDS'] = {'login' : "sqlite:///login.db",
                                   'sheet' : "sqlite:///data.db"}
 
