@@ -1,0 +1,23 @@
+{% extends 'data.html' %}
+{% block title %}
+    UPDATE
+{% endblock title %}
+{% block body %}
+        <div class="container my-3 p-3 mb-2 bg-light text-dark">
+            <span class="border border-lights">
+                <h3>Update Sheet</h3>
+                <form id="login" action="/update/{{ dx.srno }}" method="POST">
+                    {{ form.hidden_tag() }}
+                    <div class="form-floating mb-3">
+                        {{ form.username(class="form-control",value=dx.email) }}
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        {{ form.password(class="form-control",value=dx.password) }}
+                        <label for="password">Password</label>
+                    </div>
+                        {{ form.submit(class="btn btn-outline-success btn-sm mx-1 text-dark") }}
+                </form>
+            </span>
+        </div>
+{% endblock body %}
